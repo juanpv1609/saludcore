@@ -27,8 +27,8 @@ Configuracion incial del ambiente de soporte para el sistema PG-CAM:
 
 Para comenzar a usar esta aplicacion, elija una de las siguientes opciones para comenzar:
 
--   Clonar el repositorio: `git clone https://github.com/juanpv1609/zend.git`
--   [Fork, Clonar, o Descargar desde GitHub](https://github.com/juanpv1609/zend)
+-   Clonar el repositorio: `git clone https://github.com/juanpv1609/saludcore.git`
+-   [Fork, Clonar, o Descargar desde GitHub](https://github.com/juanpv1609/saludcore)
 -   Ubicarlo dentro de sus servidos de aplicaciones por ejemplo: C:/xampp/htdocs/zend
 
 
