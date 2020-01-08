@@ -1,0 +1,104 @@
+
+<script>
+  $(function () {
+    $('#tabla_usuarios').DataTable()
+  })
+</script>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Usuarios
+            <small>Listar</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li ><a href="#">Usuarios</a></li>
+            <li class="active">Listar</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box box-warning ">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Usuarios Registrados</h3>
+                        <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" type="button" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="tabla_usuarios" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Usuario</th>
+                                    <th>Correo</th>
+                                    <th>Nombre</th>
+                                    <th>Perfil</th>
+                                     <th>Estado</th>
+                                    <th>Opcion</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                                $table_m = new Application_Model_DbTable_Usuario(); //objeto del modelo historial
+                                        $datos = $table_m->listar_usuarios();
+                                    foreach ($datos as $item): ?>
+                                    <tr>
+                                        <td><?php echo $item->usuario_id ?></td>
+                                        <td><?php echo $item->usuario ?></td>
+                                        <td><?php echo $item->email ?></td>
+                                        <td><?php echo $item->nombre ?></td>
+                                        <td><?php echo $item->descripcion_perfil ?></td>
+                                        <td ><?php echo $item->icono ?></td>
+                                        <td><div class="btn-group">
+                                    <button type="button" class="btn btn-default btn-sm btn-flat dropdown-toggle" data-toggle="dropdown">
+                                        Accion <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-default pull-right" role="menu">
+                                        <!-- STUDENT PROFILE LINK -->
+                                        <li>
+                                            <a href="#" onclick=""><i class="fa fa-user-circle"></i>Perfil</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" onclick=""><i class="fa fa-pencil-square"></i>Editar</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li>
+                                            <a href="#" onclick=""><i class="fa fa-trash"></i>Eliminar</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Usuario</th>
+                                    <th>Correo</th>
+                                    <th>Nombre</th>
+                                    <th>Perfil</th>
+                                     <th>Estado</th>
+                                    <th>Opcion</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                        
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

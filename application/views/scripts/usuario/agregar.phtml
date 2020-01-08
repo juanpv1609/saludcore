@@ -1,0 +1,93 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Usuarios
+            <small>Agregar</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li ><a href="#">Usuarios</a></li>
+            <li class="active">Agregar</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="box box-success ">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Agregar Nuevo Usuario</h3>
+                        <div class="box-tools pull-right">
+                        <button class="btn btn-box-tool" type="button" data-widget="collapse">
+                        <i class="fa fa-minus"></i>
+                        </button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <form role="form">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="nombre">Nombre</label>
+                                            <input type="text" class="form-control" id="nombre" placeholder="Ingrese el nombre">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="apellido">Apellido</label>
+                                            <input type="text" class="form-control" id="apellido" placeholder="Ingrese el apellido">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                    <label for="correo">Direccion de correo</label>
+                                    <input type="email" class="form-control" id="correo" placeholder="Ingrese el correo">
+                                </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                            <label for="usuario">Nombre de usuario</label>
+                                            <input type="text" class="form-control" id="usuario" placeholder="Ingrese el nombre de usuario">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                    <label for="clave1">Contraseña</label>
+                                    <input type="password" class="form-control" id="clave1" placeholder="Ingrese la contraseña">
+                                </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="form-group">
+                                    <label for="clave2">Repita la contraseña</label>
+                                    <input type="password" class="form-control" id="clave2" placeholder="Repita la contraseña">
+                                </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                            </div>
+                        </form>
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+        </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
