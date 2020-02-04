@@ -1,6 +1,6 @@
 # [SALUD-CORE]
 
-[SALUD-CORE] es una plataforma para la gestion de camas e indicadores de calidad destinada a instituciones de salud, desarrollado como proyecto de titulacion de la carrera de ingenieria en sistemas de la [Universidad Politecnica Salesiana](https://www.ups.edu.ec/) EC.
+[SALUD-CORE] es un sistema de informacion para la gestion integral de sistemas medicos, incluye un modulo de usuarios, pacientes, medicos, laboratorio clinico, etc.
 
 
 
