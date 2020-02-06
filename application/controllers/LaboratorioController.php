@@ -82,7 +82,7 @@ class LaboratorioController extends Zend_Controller_Action
       } else {
           $Listaarea.= '
               
-              <table name="tabla_pedidos" id="tabla_pedidos" class="table table-bordered table-condensed table-hover table-sm" >
+              <table name="data_table" id="data_table" class="table table-bordered table-striped" >
                                <thead ><tr>
                                
                                   <td> <strong>N. ARCHIVO</strong></td>

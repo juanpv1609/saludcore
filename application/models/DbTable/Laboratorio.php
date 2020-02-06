@@ -4,7 +4,13 @@ class Application_Model_DbTable_Laboratorio extends Zend_Db_Table_Abstract
 {
 
     protected $_name = 'laboratorio';
-
+    public function contar_pedidos() {//carga el select con todos los tipos de muestra desde la bdd
+        $db = Zend_Registry::get('pgdb');
+        //opcional, esto es para que devuelva los resultados como objetos $row->campo
+        $db->setFetchMode(Zend_Db::FETCH_OBJ);
+        $select = "SELECT count(*) FROM pedido_examen";
+        return $db->fetchRow($select);
+    }
     public function buscarPruebasTodo() {//busca la informacion del pedido de acuerdo al numero de pedido
 
         $db = Zend_Registry::get('pgdb');

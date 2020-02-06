@@ -22,6 +22,9 @@ class IndexController extends Zend_Controller_Action
         $modelo2 = new Application_Model_DbTable_Paciente();
         $pacientes = $modelo2->contar_pacientes();
         $this->view->total_pacientes = $pacientes->count;
+        $modelo3 = new Application_Model_DbTable_Laboratorio();
+        $pedidos_lab = $modelo3->contar_pedidos();
+        $this->view->total_pedidos = $pedidos_lab->count;
     }
     function preDispatch()
     { $auth = Zend_Auth::getInstance();
