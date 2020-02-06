@@ -82,7 +82,7 @@
         <script src="<?php echo $this->baseUrl; ?>/dist/js/pages/dashboard.js"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="<?php echo $this->baseUrl; ?>/dist/js/demo.js"></script>
-
+        <script src="<?php echo $this->baseUrl; ?>/js/laboratorio.js"></script>
     </head>
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="wrapper">
@@ -277,7 +277,8 @@
                                 </span>
                             </a>
                             <ul class="treeview-menu">
-                                <li class="active"><a href="#"><i class="fa fa-circle-o"></i>Ver Pedidos</a></li>
+                                <li class="active"><a href="<?php echo $this->url(array('controller' => 'laboratorio', 'action' => 'listar')); ?>">
+                                    <i class="fa fa-circle-o"></i>Ver Pedidos</a></li>
                                 <li><a href="<?php echo $this->url(array('controller' => 'laboratorio', 'action' => 'pedido')); ?>">
                                     <i class="fa fa-circle-o"></i> Realizar Pedido</a></li>
                             </ul>
@@ -319,7 +320,7 @@
                 <div class="pull-right hidden-xs">
                     <b>Version</b> 1.0.0
                 </div>
-                <strong>&copy;2019 <a href="https://adminlte.io">Juan Perugachi</a>.</strong> 
+                <strong>&copy;<?php echo date("Y");?><a href="https://adminlte.io"> Juan Perugachi</a> </strong>Todos los derechos reservados. 
             </footer>
 
             <!-- Control Sidebar -->

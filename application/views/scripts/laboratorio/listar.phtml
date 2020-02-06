@@ -1,0 +1,81 @@
+
+<script>
+	$(function () {
+	  $('#tabla_pedidos').DataTable()
+	})
+ </script>
+ <!-- Content Wrapper. Contains page content -->
+ <div class="content-wrapper">
+	  <!-- Content Header (Page header) -->
+	  <section class="content-header">
+			<h1>
+				 Laboratorio
+				 <small>Listar Pedidos</small>
+			</h1>
+			<ol class="breadcrumb">
+				 <li><a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index')); ?>"><i class="fa fa-dashboard"></i> Home</a></li>
+				 <li ><a href="#">Laboratorio</a></li>
+				 <li class="active">Listar</li>
+			</ol>
+	  </section>
+	  <!-- Main content -->
+	  <section class="content">
+			<div class="row">
+				 <div class="col-xs-12">
+					  <div class="box box-warning ">
+							<div class="box-header with-border">
+								 <h3 class="box-title">Pedidos Realizados</h3>
+								 <div class="box-tools pull-right">
+								 <button class="btn btn-box-tool" type="button" data-widget="collapse">
+								 <i class="fa fa-minus"></i>
+								 </button>
+								 </div>
+							</div>
+							<!-- /.box-header -->
+							<div class="box-body ">
+								<div class="table-responsive">
+									<?php echo $this->data; ?>
+								</div>
+								
+								 
+							</div>
+							<!-- /.box-body -->
+					  </div>
+					  <!-- /.box -->
+				 </div>
+			</div>
+	  </section>
+	  <!-- /.content -->
+ </div>
+ <!-- /.content-wrapper -->
+ <!-- Modal -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg" role="document">
+	  <div class="modal-content">
+		 <div class="modal-header bg bg-light-blue-gradient">
+			 <div class="row">
+				 <div class="col-sm-8">
+					<h3 class="modal-title " id="exampleModalLabel">Detalle del Pedido</h3>
+				 </div>
+				 <div class="col-sm-4">
+					<small>Paciente: <span id="paciente"></span></small> <br>
+					<small>Fecha del pedido: <span id="fecha_pedido"></span></small>
+				 </div>
+			 </div>
+			
+			
+		 </div>
+		 <div class="modal-body">
+			 
+			<div  id="div_examenes">
+				
+			</div>
+		 </div>
+		 <div class="modal-footer ">
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-primary">Aceptar</button>
+		 </div>
+	  </div>
+	</div>
+ </div>

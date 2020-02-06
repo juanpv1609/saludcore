@@ -25,6 +25,7 @@
         <controllerFile controllerName="Laboratorio">
           <actionMethod actionName="index"/>
           <actionMethod actionName="pedido"/>
+          <actionMethod actionName="listar"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory enabled="false"/>
@@ -37,6 +38,7 @@
         <dbTableDirectory>
           <dbTableFile dbTableName="Usuario"/>
           <dbTableFile dbTableName="Paciente"/>
+          <dbTableFile dbTableName="Laboratorio"/>
         </dbTableDirectory>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
@@ -69,6 +71,9 @@
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Laboratorio">
             <viewScriptFile forActionName="pedido"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Laboratorio">
+            <viewScriptFile forActionName="listar"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
